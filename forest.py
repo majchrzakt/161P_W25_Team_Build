@@ -17,4 +17,3 @@ def explore_forest(path):
     return string
 
 
-

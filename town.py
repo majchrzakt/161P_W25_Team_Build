@@ -69,5 +69,6 @@ def explore_town(path):
         Do you read a book, watch a show, or go to sleep?\n
         > read\n
         You start reading 'Legends of the Lost Lands.'
-        A map to a hidden treasure in the mountains falls out!"
+        A map to a hidden treasure in the mountains falls out!
+        >Finish"
     """

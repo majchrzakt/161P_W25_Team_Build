@@ -4,6 +4,27 @@ def explore_town(path):
     """
     Allows the player to choose an activity upon returning to their place in town.
 
+    Args: path (str): The name of the player's place in town.
+    Returns (str): A narrative outcome based on the user's choice.
+
+    Behavior:
+    Display a blank line
+    Display "You head back to your place in _____" where the blank is the path sent
+    Display on a new line "Do you read a book, watch a show, or go to sleep?"
+    Set valid_choices equal to "read book watch show sleep"
+    Set choice equal to the value returned by get_valid_choice when it's sent valid_choices
+
+    Based on the value of choice do one of the following (where the _____ is the path sent):
+      read or book --> return the string "You start reading 'Legends of the Lost Lands.'
+        A map to a hidden treasure in the mountains falls out!"
+      watch or show --> return the string "You watch 'Lord of the Rings' and are inspired to
+        set out on an adventure of your own."
+      sleep --> return the string "You rest peacefully, but wake up the next day feeling like
+        you missed an opportunity."
+
+
+
+
     This function presents the player with a set of activities to choose from after
     returning to their place in town. Based on the player's choice, it returns a
     corresponding narrative string.

@@ -1,6 +1,5 @@
 from validate import get_valid_choice
-
-adef display_result(result):
+def display_result(result):
     """
     Displays the provided result string within a decorative border of asterisks.
 
@@ -8,11 +7,8 @@ adef display_result(result):
     above and below the result string. The border length is equal to the length of the result
     string plus four additional asterisks for padding.
 
-    Args:
-        result (str): The string to be displayed within the decorative border.
-
-    Returns:
-        None
+    Args: result (str): The string to be displayed within the decorative border.
+    Returns: None
 
     Behavior:
     - Calculates the length of the `result` string.
@@ -21,9 +17,10 @@ adef display_result(result):
     - Prints the `result` string, centered within the border.
     - Prints another line of asterisks identical to the first.
 
-    Example:
-        >>> display_result("Congratulations!")
-        ****
-        Congratulations!
-        ****
+
+    Set res_len to the length of result
+    Display x+4 asterisks where x is the number of letters in result
+    Display what's stored in result
+    Display x+4 asterisks where x is the number of letters in result
+    Display a blank line
     """

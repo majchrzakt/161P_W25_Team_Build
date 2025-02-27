@@ -24,7 +24,7 @@ def introduction(name):
     print("Are you ready to begin? (yes/no)")
     valid_choices = "yes no"
     choice = get_valid_choice(valid_choices)
-    if choice == "yes":
+    if "yes" in choice:
         return True
     else:
         print("Maybe next time!")

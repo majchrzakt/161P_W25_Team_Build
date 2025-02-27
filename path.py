@@ -26,3 +26,22 @@ def choose_path():
       back --> return the string "town"
       otherwise --> return the string ""
     """
+
+    clear_screen()
+    print("You find yourself at a crossroads.\n"
+          "You can still hear the bustle of the town you left behind, as you look ahead see ahead, where your path becomes steeper and more rugged.\n"
+          "From your left you hear bright chirping - accompanied by the gentle, constant creaking of old woods.\n"
+          "To your right you see the entrance to a wet and dark cave.")
+
+    valid_choices = "left", "right", "straight", "ahead", "back"
+    choice = get_valid_choice(input("Do you want to go left, right, straight ahead, or turn back?"))
+    if choice == "left":
+        return "forest"
+    elif choice == "right":
+        return "cave"
+    elif choice == "straight" or "ahead":
+        return "mountain"
+    elif choice == "back":
+        return "town"
+    else:
+        return ""

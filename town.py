@@ -70,5 +70,4 @@ def explore_town(path):
         > read\n
         You start reading 'Legends of the Lost Lands.'
         A map to a hidden treasure in the mountains falls out!
-        >Finish"
     """

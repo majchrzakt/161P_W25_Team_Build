@@ -1,7 +1,20 @@
 from validate import get_valid_choice
 
 def play_again():
-    """
+    print()
+    print("Do you want to play again? (yes/no)")
+    valid_choices = "yes no"
+    choice = get_valid_choice(valid_choices)
+    if choice == "yes":
+        return True
+    else:
+        print()
+        print("Goodbye, adventurer!")
+        return False
+
+"""
+Claudio Canchola
+
     Prompts the player to decide whether to play the game again.
 
     This function displays a prompt asking the player if they want to play again,
@@ -20,4 +33,4 @@ def play_again():
     Based on the value of choice do one of the following
       yes --> return true
       no --> display a blank line followed by "Goodbye, adventurer!" and return false
-    """
+"""

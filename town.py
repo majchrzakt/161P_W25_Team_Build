@@ -1,6 +1,24 @@
 from validate import get_valid_choice
 
 def explore_town(path):
+    print("\n")
+    print(f"You head back to your place in {path}")
+
+    valid_choices = ["read", "book", "watch", "show", "sleep"]
+
+    action = input("Do you read a book, watch a show, or go to sleep?")
+    valid = False
+    while not valid:
+        if action in valid_choices:
+            if action == "read" or action == "book":
+                return ("You start reading 'Legends of the Lost Lands'."
+                        "A map to a hidden treasure in the mountains falls out!")
+            elif action == "watch" or action == "show":
+                return "You watch 'Lord of the Rings' and are inspired to set out on an adventure of your own."
+            elif action == "sleep":
+                return "You rest peacefully, but wake up the next day feeling like you missed an opportunity."
+        else:
+            action = input("Invalid input you geezer, please enter a proper action yeah?")
     """
     Allows the player to choose an activity upon returning to their place in town.
 
@@ -38,12 +56,19 @@ def explore_town(path):
     Behavior:
     - Displays a prompt indicating the player has returned to their place in town.
     - Presents the following activity choices:
-        - 'read' or 'book': Start reading 'Legends of the Lost Lands.' A map to a hidden treasure in the mountains falls out.
+        - 'read' or 'book': Start reading 'Legends of the Lost Lands.'
+                            A map to a hidden treasure in the mountains falls out.
         - 'watch' or 'show': Watch 'Lord of the Rings' and feel inspired to set out on an adventure.
         - 'sleep': Rest peacefully but wake up feeling like an opportunity was missed.
     - Returns the corresponding narrative string based on the player's choice.
 
     Example:
         >>> explore_town("Eugene")
-        "\nYou head back to your place in Eugene.\nDo you read a book, watch a show, or go to sleep?\n> read\nYou start reading 'Legends of the Lost Lands.' A map to a hidden treasure in the mountains falls out!"
+        "\n
+        You head back to your place in Eugene.\n
+        Do you read a book, watch a show, or go to sleep?\n
+        > read\n
+        You start reading 'Legends of the Lost Lands.'
+        A map to a hidden treasure in the mountains falls out!
+        >Finish"
     """

@@ -11,16 +11,9 @@ def display_result(result):
     Returns: None
 
     Behavior:
-    - Calculates the length of the `result` string.
-    - Prints a line of asterisks with a length of `res_len + 4`, where `res_len` is the length
-      of the `result` string.
-    - Prints the `result` string, centered within the border.
-    - Prints another line of asterisks identical to the first.
-
-
     Set res_len to the length of result
-    Display x+4 asterisks where x is the number of letters in result
-    Display what's stored in result
-    Display x+4 asterisks where x is the number of letters in result
+    Display on a new line x+4 asterisks where x is the number of letters in result
+    Display on a new line two blank spaces followed by what's stored in result
+    Display on a new line x+4 asterisks where x is the number of letters in result
     Display a blank line
     """

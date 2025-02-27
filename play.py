@@ -27,3 +27,18 @@ def play_game():
     Display results and return True
 
     """
+
+    clear_screen()
+    path = choose_path()
+
+    if path == "":
+        return False
+    elif path == "forest":
+        explore_forest(path)
+    elif path == "cave":
+        explore_cave(path)
+    elif path == "mountain":
+        explore_mountain(path)
+    elif path == "town":
+        explore_town(path)
+    return True

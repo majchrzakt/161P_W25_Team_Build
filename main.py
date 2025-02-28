@@ -3,7 +3,45 @@
 #from replay import play_again
 
 def main():
-    """
+
+
+def introduction(prompt = "Hi user_name, would you like to play a game y/n?"):
+    valid_input = False
+    show_intro = False
+    while not valid_input:
+        play= input(prompt)
+        if play == "y":
+            show_intro = True
+
+
+    introduction()
+
+
+    print("Let's begin")
+
+
+def playAgain(prompt="Do you want to play again y/n? "):
+   valid_response = False
+   play_again = False
+   while not valid_response:
+      again = input(prompt).strip().lower()
+      if again == 'y':
+        print("Yay! Lets play again.")
+        play_again = True
+        valid_response = True
+      elif again == 'n':
+        print("Thanks for playing!")
+        play_again = False
+        valid_response = True
+      else:
+        print("Invalid input. Please enter 'y' for yes or 'n' for no.")
+   return play_again
+
+if __name__ == "__main__":
+    main()
+
+
+"""
     Manages the main loop of the Adventure Game, coordinating the game's flow
     from introduction to repeated gameplay sessions.
 
@@ -17,9 +55,7 @@ def main():
     Display "Thanks for playing the Adventure Game!"
 
     """
-    print("Let's begin")
 
 
-if __name__ == "__main__":
-    main()
+
 

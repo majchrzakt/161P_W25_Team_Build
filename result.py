@@ -17,3 +17,15 @@ def display_result(result):
     Display on a new line x+4 asterisks where x is the number of letters in result
     Display a blank line
     """
+    res_len = len(result)
+    print(f"\n****", end="")
+    for _ in range(res_len):
+        print("*", end="")
+
+    print(f"\n  {result}")
+    print("****", end="")
+
+    for _ in range(res_len):
+        print("*", end="")
+
+    print()

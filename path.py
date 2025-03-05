@@ -33,8 +33,10 @@ def choose_path():
           "From your left you hear bright chirping - accompanied by the gentle, constant creaking of old woods.\n"
           "To your right you see the entrance to a wet and dark cave.")
 
-    valid_choices = "left", "right", "straight", "ahead", "back"
-    choice = get_valid_choice(input("Do you want to go left, right, straight ahead, or turn back?"))
+    valid_choices = "left right straight ahead back"
+    #print (f"in path.py valid_choices is {valid_choices}")
+    print("Do you want to go left, right, straight ahead, or turn back?")
+    choice = get_valid_choice(valid_choices)
     if choice == "left":
         return "forest"
     elif choice == "right":

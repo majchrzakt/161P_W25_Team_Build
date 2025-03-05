@@ -15,3 +15,20 @@ def get_valid_choice(valid_choices):
         If valid is false, display 'Invalid choice! Please choose from: _____' where the blank is the valid choices.
     Return choice
     """
+    #print(f"in get_valid_choices valid_choices is {valid_choices}")
+    valid_words = valid_choices.split()
+    #print(f"in get_valid_choices valid_words is {valid_words}")
+    valid = False
+
+    while not valid:
+        choice = input("> ")
+        choice = choice.lower()
+
+        for c in valid_words:
+            if c in choice:
+                valid = True
+
+        if not valid:
+            print(f"Invalid choice! Please choose from: {valid_choices}")
+
+    return choice

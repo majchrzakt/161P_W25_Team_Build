@@ -24,21 +24,25 @@ def play_game():
       town --> set result to what explore_town(path) returns
       otherwise --> print "Invalid choice! Adventure terminated." and return False
 
-    Display results and return True
+    Display result and return True
 
     """
 
     clear_screen()
     path = choose_path()
+    #print(f"path is {path}")
 
-    if path == "":
-        return False
-    elif path == "forest":
-        explore_forest(path)
+    if path == "forest":
+        result = explore_forest(path)
     elif path == "cave":
-        explore_cave(path)
+        result = explore_cave(path)
     elif path == "mountain":
-        explore_mountain(path)
+        result = explore_mountain(path)
     elif path == "town":
-        explore_town(path)
+        result = explore_town(path)
+    else:
+        print("Invalid choice! Adventure terminated.")
+        return False
+
+    display_result(result)
     return True

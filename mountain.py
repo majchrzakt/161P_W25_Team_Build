@@ -19,3 +19,19 @@ def explore_mountain(path):
       look or cave --> return the string "You discover an ancient cave with mysterious markings on the walls."
       leap --> return the string "You take a leap and successfully land on a ledge below, finding a new path."
     """
+    print("")
+    print("You climb the " + path + " and reach a high peak!")
+    print("Do you enjoy the view, look for a hidden cave, or take a risky leap?")
+    valid_choices = "enjoy view look cave leap"
+    choice = get_valid_choice(valid_choices)
+
+    string = ""
+    if "enjoy" or "view" in choice:
+        string = "You enjoy the breathtaking view from the " + path + " and feel at peace."
+    elif "look" or "cave" in choice:
+        string = "You discover an ancient cave with mysterious markings on the walls."
+    elif "leap" in choice:
+        string = "You take a leap and successfully land on a ledge below, finding a new path."
+
+    return string
+
